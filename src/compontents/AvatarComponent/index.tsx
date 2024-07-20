@@ -1,11 +1,17 @@
-import "./styles.css"
+// AvatarComponent.tsx
+import React from 'react';
+import './styles.css';
 
-export default function AvatarComponent() {
-
-    return (
-       
-       <div className="avatar-frame">
-            <h2>Picture testing</h2>
-        </div>
-    )
+interface AvatarProps {
+  avatarUrl: string;
 }
+
+const AvatarComponent: React.FC<AvatarProps> = ({ avatarUrl }) => {
+  return (
+    <div className="avatar-component">
+      <img src={avatarUrl} alt="User Avatar" className="avatar-image" />
+    </div>
+  );
+}
+
+export default AvatarComponent;

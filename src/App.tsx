@@ -8,22 +8,18 @@ import Form from './routes/Home/Form';
 
 
 function App() {
-
-
   return (
     <BrowserRouter>
-       <Routes>
+      <Routes>
         <Route path="/" element={<Home />}>
-          
           <Route index element={<Wellcome />} />
-          <Route path='searcharea' element={<SearchArea />} >
-            <Route path='form' element={<Form />} />
-          </Route>         
-
+          <Route path="searcharea" element={<SearchArea />}>
+            <Route path="form" element={<Form />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;

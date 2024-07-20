@@ -1,12 +1,12 @@
 import AvatarComponent from "../../../compontents/AvatarComponent"
-import "./styels.css"
+import "../Avatar/styels.css"
 
 export default function Avatar() {
 
     return (
         <section className="">
            
-           <AvatarComponent />
+           <AvatarComponent  />
                       
         </section>
     )
