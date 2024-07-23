@@ -22,10 +22,9 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ searchName, buttonText, s
         if (setError) setError(''); // Limpar o erro se a busca for bem-sucedida
       } catch (error) {
         if (setError) setError('Erro ao buscar usuário.');
+        navigate('/searcharea');
       }
-    } else {
-      navigate('/searcharea');
-    }
+    } 
   }
 
   return (

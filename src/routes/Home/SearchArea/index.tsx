@@ -20,12 +20,18 @@ const SearchArea: React.FC = () => {
          <section className="section-area-model area-styles-search">
         <Search onSearchChange={handleSearchChange} />
         <PrimaryButton searchName={searchTerm} buttonText="Buscar" setError={setError} />
-        {error && <h2 className="error-message">{error}</h2>}
+        
         <div className="navigation-container">
           <Link to="/" className="navigate-button">Voltar para a Página Inicial</Link>
         </div>
-        
       </section>
+
+      <div className="error-manseger section-area-model">
+      {error && <h2 className="error-message">{error}</h2>}
+
+      </div>
+
+     
       <Outlet /> {/* Aqui o Outlet renderiza o Form */}
       </>
      
