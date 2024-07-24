@@ -1,15 +1,14 @@
-// PrimaryButton.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 interface PrimaryButtonProps {
-  searchName: string;
   buttonText: string;
+  searchName?: string; // Tornando searchName opcional
   setError?: React.Dispatch<React.SetStateAction<string>>; // `setError` é opcional
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({ searchName, buttonText, setError }) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({ buttonText, searchName, setError }) => {
   const navigate = useNavigate();
 
   async function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
@@ -24,12 +23,14 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ searchName, buttonText, s
         if (setError) setError('Erro ao buscar usuário.');
         navigate('/searcharea');
       }
-    } 
+    } else {
+      navigate('/searcharea'); // Navegar para '/searcharea' se searchName não estiver definido
+    }
   }
 
   return (
     <div className="primary-button">
-      <button onClick={handleClick}>{'Começar'}</button>
+      <button onClick={handleClick}>{buttonText}</button>
     </div>
   );
 }
