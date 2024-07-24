@@ -16,7 +16,7 @@ const Search: React.FC<SearchProps> = ({ onSearchChange }) => {
   }
 
   return (
-    <div>
+    <div className="search-component">
       <input 
         className="search-profile" 
         name="searchName"

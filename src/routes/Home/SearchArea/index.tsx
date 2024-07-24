@@ -22,7 +22,7 @@ const SearchArea: React.FC = () => {
         <PrimaryButton searchName={searchTerm} buttonText="Buscar" setError={setError} />
         
         <div className="navigation-container">
-          <Link to="/" className="navigate-button">Voltar para a Página Inicial</Link>
+          <Link to="/" className="navigate-button"><img src="src/assets/images/image.png" alt="" /></Link>
         </div>
       </section>
 

@@ -1,8 +1,15 @@
 
+.search-component input {
+    border-radius: 6px;
+    border: none;
+}
+
 .search-profile {
     font-size: 16px;
     color: #BFBFBF;
     width: 298px;
     height: 40px;
     padding: 15px 20px;
+    outline: 0;
 }
+

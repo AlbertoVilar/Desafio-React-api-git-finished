@@ -10,3 +10,9 @@
     padding: 0;
     padding-top: 15px;
 }
+
+.navigate-button img {
+    width: 30px;
+    height: 30px;
+    background-color: #E6F7FF
+}
